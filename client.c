@@ -19,24 +19,29 @@ int recv_rate=200;
 int send_off=200;
 int recv_off=200;
 
-void credit(char *id)
+void credit_20103318(void)
 {
-	int ID = atoi(id);
-
-	switch(ID)
-	{
-		case 20103318:
-			printf("20103318 JungChul Kim : Make a Report and client.c \n");
-		case 20103376:
-			printf("20103376 Gisung Im designed function connection(),put(),get() and participated in writing the report \n");
-			break;
-		case 20103327:
-			printf("20103327 HeeTae Kim : Make client.c\n");
-			break;
-		default:
-			printf("Invalid id %d\n",ID);
-			break;
-	}
+    // add print
+    printf("20103318 \n");
+}
+void credit_20103327(void)
+{
+    // add print
+    printf("20103327 \n");
+}
+void credit_20103376(void)
+{
+    printf("20103376 Gisung Im degined function connection(), put(),get() and participated in writing to report\n");
+}
+void credit_20123360(void)
+{
+    // add print
+    printf("20103360 \n");
+}
+void credit_20133342(void)
+{
+    // add print
+    printf("20103342 \n");
 }
 int sendAll(int sockid,const unsigned char *buffer,int len)
 {
@@ -338,7 +343,28 @@ int main(int argc, char *argv[])
 		else if(strcmp("credit",command) ==0)
 		{
 			fscanf(stdin,"%s",val[0]);
-			credit(val[0]);
+        		 int id=atoi(val[0]);
+        		  switch(id)
+        		  {
+        		      case 20103318:
+        		            credit_20103318();
+        			    break;
+		              case 20103327:
+               			    credit_20103327();
+               			    break;
+                              case 20103376:
+                		    credit_20103376();
+                 		    break;
+                	      case 20123360:
+                    		    credit_20123360();
+                    		    break;
+                	      case 20133342:
+                    		    credit_20133342();
+                    		    break;
+                	      default:
+                    		printf("Invalid id %d\n",id);
+                    		break;
+        		 }
 		}
 		else if(strcmp("put",command) == 0)
 		{
