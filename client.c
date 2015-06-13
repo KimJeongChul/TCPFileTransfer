@@ -22,7 +22,7 @@ int recv_off=200;
 void credit_20103318(void)
 {
     // add print
-    printf("20103318 \n");
+    printf("20103318 Jungchul Kim designed function sendAll(), sig_handler(), sig_end() and make report\n");
 }
 void credit_20103327(void)
 {
