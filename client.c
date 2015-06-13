@@ -30,6 +30,9 @@ void credit(char *id)
 		case 20103376:
 			printf("20103376 Gisung Im designed function connection(),put(),get() and participated in writing the report \n");
 			break;
+		case 20103327:
+			printf("20103327 HeeTae Kim : Make client.c\n");
+			break;
 		default:
 			printf("Invalid id %d\n",ID);
 			break;
