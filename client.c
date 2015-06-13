@@ -28,7 +28,7 @@ void credit(char *id)
 		case 20103318:
 			printf("20103318 JungChul Kim : Make a Report and client.c \n");
 		case 20103376:
-			printf("ABC develop\n");
+			printf("20103376 Gisung Im designed function connection(),put(),get() and participated in writing the report \n");
 			break;
 		default:
 			printf("Invalid id %d\n",ID);
