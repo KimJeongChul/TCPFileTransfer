@@ -30,7 +30,7 @@ void credit_20103327(void)
 }
 void credit_20103376(void)
 {
-    printf("20103376 Gisung Im desgined function connection(), put(),get() and participated in writing to report\n");
+    printf("20103376 Gisung Im desgined function connection(), put(),get(), create_20103376 and make server.c\n");
 }
 void credit_20123360(void)
 {
