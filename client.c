@@ -97,17 +97,17 @@ int connectServer(int sockid, struct sockaddr_in *server_addr,char *ip,char *por
 		exit(1);
 	}
 
-    //Client: creating addr structure for server
-    bzero(server_addr, sizeof(*server_addr));
-    server_addr->sin_family = AF_INET;
-    memcpy((void*)&server_addr->sin_addr,hostp->h_addr,hostp->h_length);
-    server_addr->sin_port = htons(atoi(port));
+    	//Client: creating addr structure for server
+    	bzero(server_addr, sizeof(*server_addr));
+    	server_addr->sin_family = AF_INET;
+    	memcpy((void*)&server_addr->sin_addr,hostp->h_addr,hostp->h_length);
+    	server_addr->sin_port = htons(atoi(port));
 
 	// connect check;
 	
 	if(connect(sockid, (struct sockaddr*)server_addr,sizeof(*server_addr)) < 0)
 	{
-		printf("Conection failed\n");
+		perror("Conection failed");
 		return -1;
 	}
 	else
@@ -255,11 +255,11 @@ int main(int argc, char *argv[])
 {
     int sockid;
     struct sockaddr_in server_addr;
-	int connectFlag=0;
-	int r;
+    int connectFlag=0;
+    int r;
     char msg[128];
-	char command[10]; 
-	char val[2][12];	
+    char command[10]; 
+    char val[2][12];	
 
 	// client: creating socket
 	if((sockid = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
@@ -366,9 +366,17 @@ int main(int argc, char *argv[])
 		{
 			if(connectFlag)
 			{
+                		sprintf(msg,"quit");
+                		send(sockid,msg,sizeof(msg),0);
 				close(sockid);
 				connectFlag=0;
 				printf("Disconnected\n");
+
+
+	            	if((sockid = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
+		            printf("client socket failed: %d\n",errno);
+		            exit(0);
+	            	}
 			}
 			else
 				printf("Already not connected in server\n");
