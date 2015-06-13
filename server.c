@@ -202,8 +202,8 @@ int main(int argc, char *argv[])
    pid_t pid;
 
    if(argc != 2) {
-	   printf("%s port: input port number\n", argv[0]);
-       return 0;
+	printf("%s port: input port number\n", argv[0]);
+       	return 0;
 	}
 				 
 	//Server: creating socket
@@ -259,7 +259,7 @@ int main(int argc, char *argv[])
 						get(newsockid, token2);
 					}
 					else if(strcmp("quit",token1) == 0){
-						printf("Kill child %i\n",getpid());
+						printf("Leave client %i\n",getpid());
 
 						nread = send(newsockid, buffer, sizeof(buffer)-1,0);
 						if(nread < 0)
