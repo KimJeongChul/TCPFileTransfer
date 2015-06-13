@@ -39,7 +39,7 @@ void credit_20123360(void)
 void credit_20133342(void)
 {
     // add print
-    printf("20103342 \n");
+    printf("20103342 Lee Doona designed function credit_20133242()\n");
 }
 int sendAll(int sockid,const unsigned char *buffer,int len)
 {
