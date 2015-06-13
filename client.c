@@ -26,8 +26,7 @@ void credit_20103318(void)
 }
 void credit_20103327(void)
 {
-    // add print
-    printf("20103327 \n");
+    printf("20103327 HeeTae designed function credit_20103327 and make client.c\n");
 }
 void credit_20103376(void)
 {
