@@ -7,4 +7,4 @@ Gyeungmin Min
 Doona Lee
 Gisung Lim 
 
-When you run this program, you have to position the server and client program to a different directory.
+# When you run this program, you have to position the server and client program to a different directory.
